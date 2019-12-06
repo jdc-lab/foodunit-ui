@@ -1,0 +1,19 @@
+{  
+  "parser": "@typescript-eslint/parser",
+
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+    }
+  },
+
+  "plugins": [
+    "class-property",
+  ],
+
+  "rules": {
+    "semi": ["error", "never"],
+    "class-property/class-property-semicolon": ["error", "never"],
+  }
+}

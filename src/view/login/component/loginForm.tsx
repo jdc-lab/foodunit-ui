@@ -6,6 +6,12 @@ import { Component } from 'react'
 import { AuthStore } from "../../../store/authStore"
 import * as Routes from "../../../routes"
 
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+
+import './loginFormStyle.scss'
+import FlatButton from "../../../commonComponents/flatButton"
+
 interface LoginFormProps {
     authStore?: AuthStore
 }
@@ -39,19 +45,40 @@ export class LoginForm extends Component<LoginFormProps> {
 
     render() {
         return (
-            <form spellCheck="false" onSubmit={this.handleLogin}>
-                <input type="text" name="mail-addr" placeholder="Deine E-Mail-Adresse"
+            <Form onSubmit={this.handleLogin}>
+                <Form.Group controlId="formLoginData">
+                    <Form.Control type="email" placeholder="Deine E-Mail-Adresse"
+                        value={this.authStore.mailAddress}
+                        onChange={this.handleMailAddressChange} />
+                    
+                    <Form.Control type="password" placeholder="Dein Passwort"
+                        value={this.authStore.password}
+                        onChange={this.handlePasswordChange} />
+
+                    <Form.Text className="text-danger">
+                        {this.authStore.loginErrorMessage}
+                    </Form.Text>
+
+                    <FlatButton className="text-strong" type="submit">
+                        einloggen
+                    </FlatButton>
+
+                </Form.Group>
+            </Form>
+
+            /*<form spellCheck="false" onSubmit={this.handleLogin}>
+                <FormText type="text" name="mail-addr" placeholder="Deine E-Mail-Adresse"
                        value={this.authStore.mailAddress}
                        onChange={this.handleMailAddressChange}/>
                 <input type="password" name="password" placeholder="Dein Passwort"
                        value={this.authStore.password}
                        onChange={this.handlePasswordChange}/>
-                <button>
+                <Button color="primary">
                     einloggen
-                </button>
+                </Button>
 
                 <p>{this.authStore.loginErrorMessage}</p>
-            </form>
+            </form>*/
         )
     }
 }

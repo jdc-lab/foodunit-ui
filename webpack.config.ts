@@ -28,20 +28,31 @@ export default {
 
   module: {
     rules: [
-        {
-            test: /\.tsx?$/,
-            use: 'ts-loader',
-        },
-        {
-            test: /\.tsx$/,
-            exclude: /node_modules/,
-            use: {
-                loader: 'eslint-loader',
-                options: {
-                    fix: true,
-                },
-            }
-        },
+      { 
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [ "style-loader", "css-loader", "sass-loader" ] 
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: 'ts-loader'
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'eslint-loader',
+          options: {
+            fix: true,
+          }
+        }
+      },
+      { 
+        enforce: "pre", 
+        test: /\.js$/, 
+        loader: "source-map-loader" 
+      }
     ],
   },
 

@@ -10,6 +10,8 @@ import * as Routes from './routes'
 import { AuthStore } from './store/authStore'
 import { MyOffersView } from './view/myOffers/myOffersView'
 
+import './style.scss'
+
 export interface Config {
     apiUrl: string
 }
@@ -28,22 +30,24 @@ export class App extends Component<AppProps> {
 
     render() {
         return (
-            <Provider authStore={this.authStore}>
-                <Router>
-                    <LoginView default path={Routes.LOGIN_ROUTE} />
-                    <OffersView path={Routes.OFFERS_ROUTE} />
-                    <MyOffersView path={Routes.MY_OFFERS_ROUTE}/>
-                    {/*
-                    <LogoutView path={LOGOUT_ROUTE}/>
-                    <LoginView default path={LOGIN_ROUTE}/>
-                    <OffersView path={OFFERS_ROUTE}/>
-                    <CreateOfferView path={CREATE_OFFER_ROUTE}/>
-                    <MyOffersView path={MY_OFFERS_ROUTE}/>
-                    <OfferView path={`${OFFER_ROUTE}/:offerId`}/>
-                    <OrdersView path={ORDERS_VIEW}/>
-                    */}
-                </Router>
-            </Provider>
+            <>
+                <Provider authStore={this.authStore}>
+                    <Router>
+                        <LoginView default path={Routes.LOGIN_ROUTE} />
+                        <OffersView path={Routes.OFFERS_ROUTE} />
+                        <MyOffersView path={Routes.MY_OFFERS_ROUTE}/>
+                        {/*
+                        <LogoutView path={LOGOUT_ROUTE}/>
+                        <LoginView default path={LOGIN_ROUTE}/>
+                        <OffersView path={OFFERS_ROUTE}/>
+                        <CreateOfferView path={CREATE_OFFER_ROUTE}/>
+                        <MyOffersView path={MY_OFFERS_ROUTE}/>
+                        <OfferView path={`${OFFER_ROUTE}/:offerId`}/>
+                        <OrdersView path={ORDERS_VIEW}/>
+                        */}
+                    </Router>
+                </Provider>
+            </>
         )
     }
 }

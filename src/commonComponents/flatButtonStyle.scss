@@ -1,0 +1,23 @@
+.btn-flat {
+    border-radius: 0;
+    border: 0;
+    background-color: #F7F8FC;
+
+    &:hover, &:active, &:focus {
+        background-color: #dcdee2;
+        border-color: #dcdee2;
+        border: 0;
+    }
+
+    &:focus,&:active {
+        outline: none !important;
+        box-shadow: none;
+    }
+
+    &:hover {
+        color: #212529;
+    }
+
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+}
+

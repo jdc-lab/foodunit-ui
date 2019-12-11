@@ -72,7 +72,7 @@ export class AuthStore {
                 this.setLoggedIn()
                 navigate(Routes.MAIN_ROUTE)
             } else {
-                this.loginErrorMessage = "Login fehlgeschlagen. E-Mail oder Passwort ist falsch."
+                this.setErrorMessage("Login fehlgeschlagen. E-Mail oder Passwort ist falsch.")
             }
         }).catch(function (error) {
             console.log(error)
@@ -122,5 +122,10 @@ export class AuthStore {
     @action
     private setLoggedOut() {
         this.loggedIn = false
+    }
+
+    @action
+    private setErrorMessage(message: string) {
+        this.loginErrorMessage = message
     }
 }

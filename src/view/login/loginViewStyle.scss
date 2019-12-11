@@ -1,0 +1,45 @@
+
+
+
+.login-container {
+    width:500px;
+    padding: 48px;
+    
+    .login-header {
+        .text-logo {
+            width: 100%;
+            font-size: 2.15em;
+            text-align: center;
+            padding: 24px;
+            font-family: 'Kaushan Script';
+            background-color: #2D3743;
+            color: #fff;
+        }
+    }
+
+    .login-body {
+        background: linear-gradient(135deg, #FFE1E9 5%, #FFEFD8 95%);
+        padding: 24px;
+
+        .login-text {
+            width: 100%;
+            font-size: 1.72em;
+            text-align: center;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-top: 48px;
+            padding-bottom: 48px;
+            font-family: 'Roboto';
+            
+        }
+    
+        .login-form-row {
+            width: 100%;
+        }
+    
+        .login-copyright {
+            width: 100%;
+            font-size: .84em;    
+        }
+    }
+}

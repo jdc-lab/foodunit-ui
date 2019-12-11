@@ -1,0 +1,19 @@
+form {
+    width: 100%;
+    .btn {
+        width: 100%;
+    }
+
+    .form-group {
+        margin: 16px;
+
+        >input {
+            margin-bottom: 8px;
+        }
+        >button {
+            margin-top: 8px;
+        }
+    }
+
+    
+}

@@ -1,0 +1,21 @@
+.form-control {
+    border-radius: 0;
+    border: 0;
+    background-color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.link-underlined {
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.text-strong {
+    font-weight: 500;
+}

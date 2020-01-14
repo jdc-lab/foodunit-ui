@@ -3,9 +3,9 @@
 
 .login-container {
     width:500px;
-    padding: 48px;
     
     .login-header {
+
         .text-logo {
             width: 100%;
             font-size: 2.15em;
@@ -19,16 +19,12 @@
 
     .login-body {
         background: linear-gradient(135deg, #FFE1E9 5%, #FFEFD8 95%);
-        padding: 24px;
 
         .login-text {
             width: 100%;
             font-size: 1.72em;
             text-align: center;
-            padding-left: 24px;
-            padding-right: 24px;
-            padding-top: 48px;
-            padding-bottom: 48px;
+            padding: 48px 24px;
             font-family: 'Roboto';
             
         }

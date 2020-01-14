@@ -6,17 +6,18 @@ import Row from 'react-bootstrap/Row'
 import './loginViewStyle.scss'
 
 
-export function LoginView(props) {
-    return (<>
-        
-        <Container className="d-flex justify-content-center login-container">
-            <Col>
-                <Row className="login-header">
+export function LoginView() {
+    return (
+        <Container className="p-0 pt-md-5 justify-content-center login-container">
+            <Row noGutters>
+                <Col className="login-header">
                     <div className="text-logo">
                         FoodUnit
                     </div>
-                </Row>
-                <Row className="login-body">
+                </Col>
+            </Row>
+            <Row noGutters>
+                <Col className="login-body">
                     <div className="login-text text-strong">
                         Jetzt einloggen & Essen bestellen
                     </div>
@@ -29,12 +30,8 @@ export function LoginView(props) {
                             dominikbraun/foodunit
                         </a>
                     </p>
-                </Row>
-                
-            </Col>
-        
-            
+                </Col>
+            </Row>
         </Container>
-        </>
     )
 }

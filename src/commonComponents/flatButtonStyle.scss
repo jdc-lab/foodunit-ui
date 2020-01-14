@@ -5,8 +5,7 @@
 
     &:hover, &:active, &:focus {
         background-color: #dcdee2;
-        border-color: #dcdee2;
-        border: 0;
+        border: 0 #dcdee2;
     }
 
     &:focus,&:active {

@@ -16,6 +16,43 @@
     }
 }
 
+.text-sm {
+    font-size: .84em;
+}
+
 .text-strong {
     font-weight: 500;
+}
+
+.bg-primary-gradient {
+    background: #fe5d70;
+    background: -moz-linear-gradient(40deg, #fe5d70 51%, #ED576E 51%);
+    background: -webkit-linear-gradient(40deg, #fe5d70 51%, #ED576E 51%);
+    background: linear-gradient(40deg,
+            #FF6382 0%,
+            #FF6382 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe5d70', endColorstr='#ED576E', GradientType=1);
+}
+
+.div-logo {
+    max-width: 82%;
+}
+
+.text-logo {
+    font-size: 2.15em;
+}
+
+.text-hand {
+    font-family: 'Kaushan Script';
+    font-weight: normal !important;
+    cursor: default;
+}
+
+.border-right {
+    border-right: 1px solid
+    #EFF1F4 !important;
+}
+.bg-darker {
+    background-color:
+            #29333e;
 }

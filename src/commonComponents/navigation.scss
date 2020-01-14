@@ -1,0 +1,11 @@
+.navigation-column {
+    background-color: #2D3743;
+    color: #CBD2DB;
+}
+
+.nav-link {
+    &.active {
+        border-left: 3px solid #16d39a;
+    }
+
+}

@@ -29,7 +29,7 @@ interface NavigationProps {
 const Navigation = ({children, activeRoute}: NavigationProps) => (
     <Container fluid className="navigation-container">
         <Row>
-            <Col className="p-0 navigation-column bg-darker border-right" xs={12} md={2}>
+            <Col className="p-0 navigation-column sidebar-left-lg bg-darker border-right col-12 col-lg-3 col-xl-2">
                 <div className="px-2 py-1 px-xl-4 py-xl-4">
                     {/* Todo: logo in extra component?*/}
                     <div
@@ -53,8 +53,11 @@ const Navigation = ({children, activeRoute}: NavigationProps) => (
                     </LinkElement>
                 </Nav>
             </Col>
-            <Col>
+            <Col className="col-12 col-lg-6 col-xl-8 px-1 px-md-4 mx-auto">
                 {children}
+            </Col>
+            <Col className="col-12 col-lg-3 col-xl-2 p-0 sidebar-right-lg bg-white border-left">
+                left
             </Col>
         </Row>
     </Container>

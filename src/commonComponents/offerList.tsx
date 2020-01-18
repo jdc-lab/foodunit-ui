@@ -30,14 +30,14 @@ const OfferListItem = ({offerId, offerName, responsibleName, from, to}: OfferLis
 
     return (
         <tr>
-            <td className="align-middle py-3">
-                <p className="text-sm mb-1">Bestellung möglich:</p>
-                <p className="text-md text-strong mb-0">{from} – {to} Uhr</p>
-            </td>
             <td className="align-middle pl-0 pr-3 py-4">
                 <div className="text-hand text-lg bg-gradient rounded-0 text-dark text-center px-1 py-2">
                     {offerName}
                 </div>
+            </td>
+            <td className="align-middle py-3">
+                <p className="text-sm mb-1">Bestellung möglich:</p>
+                <p className="text-md text-strong mb-0">{from} – {to} Uhr</p>
             </td>
             <td className="align-middle py-3">
                 <p className="text-sm mb-1">Angebot erstellt von:</p>

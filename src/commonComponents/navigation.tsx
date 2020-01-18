@@ -38,7 +38,7 @@ const Navigation = ({children, activeRoute}: NavigationProps) => (
                     </div>
                 </div>
                 <p className="text-light text-center text-strong text-sm mb-0 p-3">Angebot auswählen &amp; bestellen</p>
-                <Nav defaultActiveKey="/home" className="flex-column">
+                <Nav defaultActiveKey="/home" className="flex-column side-nav">
                     <LinkElement activeRoute={activeRoute} route={OFFERS_ROUTE}>
                         <i className="fas fa-pizza-slice ml-1 mr-3"></i>
                         Aktuelle Angebote

@@ -1,11 +1,12 @@
+* {
+    /* noinspection CssNoGenericFontName */
+    font-family: 'Roboto';
+}
+
 .form-control {
     border-radius: 0;
     border: 0;
     background-color: #fff;
-}
-
-.text-center {
-    text-align: center;
 }
 
 .link-underlined {
@@ -42,17 +43,32 @@
     font-size: 2.15em;
 }
 
+.text-lg {
+    font-size: 1.72em;
+}
+.text-dark {
+    color: #29333e !important;
+}
+
 .text-hand {
     font-family: 'Kaushan Script';
-    font-weight: normal !important;
+    font-weight: normal;
     cursor: default;
 }
 
 .border-right {
     border-right: 1px solid
-    #EFF1F4 !important;
+    #EFF1F4;
 }
 .bg-darker {
+    background-color: #29333e;
+}
+
+.border {
+    border: 1px solid #EFF1F4 !important;
+}
+
+.bg-light {
     background-color:
-            #29333e;
+            #F7F8FC !important;
 }

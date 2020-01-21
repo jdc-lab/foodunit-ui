@@ -1,9 +1,8 @@
-import {Link, RouteComponentProps} from "@reach/router"
+import {Link} from "@reach/router"
 import {LOGIN_ROUTE} from "../routes"
 import {inject, observer} from "mobx-react"
-import React, { Component } from 'react'
+import React  from 'react'
 import { AuthStore } from "../store/authStore"
-import { computed } from "mobx"
 
 interface LoggedInProps {
     authStore?: AuthStore
@@ -13,20 +12,12 @@ interface LoggedInProps {
 /**
  * LoggedIn is a wrapper for views which should only be displayed if logged in.
  */
-@inject('authStore')
-@observer
-export class LoggedIn extends Component<LoggedInProps> {
-
-    @computed
-    get authStore() {
-        return this.props.authStore
-    }
-
-    render() {
-        if (this.authStore.loggedIn) {
-            return <>{this.props.children}</>
-        } else if (!this.authStore.autoLoginAlreadyRun) {
-            this.authStore.onTryAutoLogin()
+export const LoggedIn = inject("authStore")(
+    observer(({ authStore, children }: LoggedInProps) => {
+        if (authStore.loggedIn) {
+            return <>{children}</>
+        } else if (!authStore.autoLoginAlreadyRun) {
+            authStore.onTryAutoLogin()
             return (
                 <div>
                     LOADING...
@@ -40,6 +31,5 @@ export class LoggedIn extends Component<LoggedInProps> {
                 </div>
             )
         }
-    }
-
-}
+    })
+)

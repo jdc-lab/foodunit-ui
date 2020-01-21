@@ -2,7 +2,7 @@ import { observable, action, reaction, computed } from 'mobx'
 import Axios from 'axios'
 import { navigate } from "@reach/router"
 
-import { Config } from '../app'
+import { Config } from '../index'
 import * as Routes from '../routes'
 
 export class AuthStore {

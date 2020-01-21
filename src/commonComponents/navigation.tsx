@@ -4,7 +4,6 @@ import {CREATE_OFFER_ROUTE, MY_OFFERS_ROUTE, OFFERS_ROUTE} from "../routes"
 import {Link} from "@reach/router"
 
 import "./navigation.scss"
-import {AuthStore} from "../store/authStore"
 
 interface LinkElementProps {
     children: React.ReactNode,
